@@ -69,20 +69,20 @@ st.title("Interactive EMI Calculator with House Price")
 
 # House price and loan ratio
 st.sidebar.header("Property and Loan Details")
-house_price = st.sidebar.number_input(
+# house_price = st.sidebar.number_input(
+#     "House Price (₹)",
+#     min_value=2 * CRORE,
+#     max_value=10 * CRORE,
+#     step=10 * LAKH,
+#     value=3 * CRORE,
+# )
+
+house_price = st.sidebar.slider(
     "House Price (₹)",
     min_value=2 * CRORE,
     max_value=10 * CRORE,
-    step=10 * LAKH,
-    value=3 * CRORE,
-)
-
-house_price = st.sidebar.slider(
-    "Adjust House Price",
-    min_value=2 * CRORE,
-    max_value=10 * CRORE,
     step=20 * LAKH,
-    value=house_price,
+    value=3 * CRORE,
 )
 # house_price = house_price_slider if house_price_slider != house_price else house_price
 
